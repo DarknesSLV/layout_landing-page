@@ -8,16 +8,28 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
 
-.header__bottom {
-  padding: 0 20px 40px;
-  margin: 0;
-}
+  &__title  {
+    margin: 0;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
 
-.header__title  {
-  color: #FFF;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 36px;
+    @include onTablet {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  &__bottom {
+    padding-bottom: 40px;
+    @include contentPaddingInline;
+    margin: 0;
+
+    @include onTablet{
+      padding-bottom: 64px;
+    }
+  }
+
 }
